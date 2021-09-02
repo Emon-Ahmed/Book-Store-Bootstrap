@@ -14,9 +14,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center hina-font">Book Archive</h1>
-        
+    <div class="container my-4">
+        <div class="search-area">
+            <h1 class="text-center hina-font">Book Archive</h1>
+
+            <div class="input-group mb-3 w-75 m-auto">
+                <input type="text" id="searchTextID" class="form-control" placeholder="Books Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button onclick="searchBook()" class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+            </div>
+            <p id="showing">
+                
+            </p>
+            
+
+        </div>
+        <div class="row" id="row">
+            
+        </div>
     </div>
     <!-- MY JS  -->
     <script src="app.js"></script>

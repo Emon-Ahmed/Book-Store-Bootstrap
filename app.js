@@ -27,8 +27,8 @@ const showBook = (docs, length, totalBook) => {
   if (docs.length > 0) {
     document.getElementById("showing").innerHTML = `
     <div class="text-center text-success">
-      <span class="fw-bold">Total Books:</span> ${totalBook}
-      <span class="fw-bold">Showing Result:</span> ${length}
+      <span class="fw-bold">Total Book Found:</span> ${totalBook},
+      <span class="fw-bold">Showing Results:</span> ${length}
     </div>`;
     docs.forEach((book) => {
       document.getElementById("row").innerHTML += `
@@ -41,9 +41,9 @@ const showBook = (docs, length, totalBook) => {
                             : `images/no.png`}" alt="Book Cover Photo">
                         <div class="card-body bg-light">
                             <h5 class="card-text fw-bold">${book.title}</h5>
-                            <p class="card-text"><span class="fw-bold">First Publish Year:</span> ${book.first_publish_year}</p>
-                            <p class="card-text"><span class="fw-bold">Puslisher Name:</span> ${book.publisher}</p>
-                            <p class="card-text"><span class="fw-bold">Author Name:</span>  ${book.author_name}</p>
+                            <p class="card-text"><span class="fw-bold">Author:</span>  ${book.author_name}</p>
+                            <p class="card-text"><span class="fw-bold">Publisher:</span> ${book.publisher}</p>
+                            <p class="card-text"><span class="fw-bold">First Published:</span> ${book.first_publish_year}</p>
                         </div>
                     </div>
                 </span>
@@ -52,7 +52,7 @@ const showBook = (docs, length, totalBook) => {
     });
   } else {
     document.getElementById("row").innerHTML = `
-    <h1 class="text-warning text-center">Nothing Found</h1>
+    <h1 class="text-warning text-center">No Results Found</h1>
     `;
   }
 };
